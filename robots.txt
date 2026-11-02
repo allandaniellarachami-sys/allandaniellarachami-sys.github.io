@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://allandaniellarachami-sys.github.io/sitemap.xml
