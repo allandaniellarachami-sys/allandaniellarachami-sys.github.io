@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Analix | Encontramos por dónde se te fuga la plata</title>
+<meta name="description" content="Costeo, inventario, software contable y control financiero para negocios en Bogotá. Diagnóstico gratuito de 30 minutos.">
+<meta name="theme-color" content="#07070C">
+<meta name="author" content="Analix">
+<meta name="robots" content="index,follow">
+
+<!-- Vista previa al compartir por WhatsApp, Instagram o correo.
+     Cuando tengas el dominio, reemplaza TU-DOMINIO.COM en og:url y agrega una imagen 1200x630:
+     <meta property="og:image" content="https://TU-DOMINIO.COM/preview.jpg"> -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Analix">
+<meta property="og:title" content="Encontramos por dónde se te fuga la plata">
+<meta property="og:description" content="Costeo, inventario y control financiero para negocios que ya facturan pero no saben cuánto están ganando de verdad. Diagnóstico gratuito de 30 minutos.">
+<meta property="og:url" content="https://TU-DOMINIO.COM/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Encontramos por dónde se te fuga la plata">
+<meta name="twitter:description" content="Costeo, inventario y control financiero para pequeños negocios en Colombia.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070C'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='40' font-weight='bold' fill='%23D4FF4F' text-anchor='middle'%3Ea%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070C;--surf:#11111A;--surf2:#1A1A26;--lime:#D4FF4F;--violet:#9B7BFF;--coral:#FF7A59;--cyan:#4FE3FF;--txt:#F7F7FA;--mut:#95959F;--line:#23232F}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.gro{font-family:'Space Grotesk',sans-serif}
+.wrap{max-width:1020px;margin:0 auto;padding:0 24px}
+.narrow{max-width:780px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+section[id],#diagnostico{scroll-margin-top:84px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,label.chk:focus-within{outline:2px solid var(--lime);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--lime);color:#07070C;padding:12px 20px;border-radius:0 0 10px 0;font-weight:600;z-index:100}
+.skip:focus{left:0}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(7,7,12,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{max-width:1020px;margin:0 auto;padding:15px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:23px;letter-spacing:-.03em}
+.logo span{color:var(--lime)}
+.navcta{background:var(--lime);color:#07070C;text-decoration:none;padding:9px 19px;border-radius:99px;font-weight:600;font-size:14px;transition:.2s;white-space:nowrap}
+.navcta:hover{box-shadow:0 0 22px rgba(212,255,79,.45)}
+
+.hero{padding:96px 0 72px;position:relative}
+.blob{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:-1}
+.b1{top:-200px;right:-180px;width:520px;height:520px;background:var(--violet);opacity:.16;animation:fl 16s ease-in-out infinite}
+.b2{bottom:-140px;left:-150px;width:400px;height:400px;background:var(--cyan);opacity:.09;animation:fl 20s ease-in-out infinite reverse}
+@keyframes fl{0%,100%{transform:translate(0,0)}50%{transform:translate(36px,-28px)}}
+.tag{display:inline-block;border:1px solid var(--line);color:var(--lime);font-size:13px;padding:6px 15px;border-radius:99px;margin-bottom:26px;font-weight:500}
+.dot{display:inline-block;width:6px;height:6px;background:var(--lime);border-radius:50%;margin-right:8px;animation:pu 2s infinite}
+@keyframes pu{0%,100%{opacity:1}50%{opacity:.25}}
+h1{font-size:clamp(39px,7vw,70px);line-height:1.02;font-weight:700;letter-spacing:-.04em;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--lime)}
+.lead{font-size:19px;color:var(--mut);max-width:590px;margin-bottom:34px}
+.btn{display:inline-block;background:var(--lime);color:#07070C;text-decoration:none;padding:16px 33px;border-radius:99px;font-weight:600;font-size:16px;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(212,255,79,.3)}
+.btn2{background:transparent;color:var(--txt);border:1px solid var(--line);margin-left:10px}
+.btn2:hover{border-color:var(--lime);box-shadow:none}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;margin-top:66px;padding-top:34px;border-top:1px solid var(--line)}
+.stat b{display:block;font-family:'Space Grotesk';font-size:31px;color:var(--lime);font-weight:700}
+.stat span{font-size:14px;color:var(--mut)}
+
+section{padding:78px 0;border-top:1px solid var(--line)}
+.eyebrow{color:var(--violet);font-size:13px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;margin-bottom:14px}
+h2{font-size:clamp(28px,4.6vw,43px);letter-spacing:-.03em;line-height:1.1;margin-bottom:16px;font-weight:700}
+.sub{color:var(--mut);font-size:17px;max-width:630px;margin-bottom:42px}
+
+.tool{background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:34px}
+.tool h3{font-size:22px;margin-bottom:8px}
+.tool .th{color:var(--mut);font-size:15px;margin-bottom:26px}
+.chk{display:flex;gap:13px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;cursor:pointer;transition:.18s}
+.chk:hover{border-color:var(--violet);background:var(--surf2);transform:translateX(3px)}
+.chk input{margin-top:4px;width:18px;height:18px;accent-color:var(--lime);flex-shrink:0}
+.chk span{font-size:15px}
+label.fl{display:block;font-size:14px;color:var(--mut);margin:18px 0 8px}
+input[type=number],select{width:100%;background:var(--surf2);border:1px solid var(--line);color:var(--txt);padding:13px 15px;border-radius:11px;font-size:16px;font-family:inherit}
+input:focus,select:focus{outline:none;border-color:var(--lime)}
+input[type=range]{width:100%;accent-color:var(--lime);margin-top:8px}
+.go{width:100%;background:var(--lime);color:#07070C;border:0;padding:15px;border-radius:11px;font-weight:600;font-size:16px;font-family:inherit;cursor:pointer;margin-top:22px;transition:.2s}
+.go:hover{box-shadow:0 0 26px rgba(212,255,79,.4)}
+.out{margin-top:22px;padding:25px;border-radius:14px;background:var(--surf2);border-left:3px solid var(--lime);display:none}
+.out.on{display:block;animation:up .45s cubic-bezier(.22,1,.36,1)}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.big{font-family:'Space Grotesk';font-size:35px;font-weight:700;color:var(--lime);line-height:1.15;margin:6px 0 10px}
+.big.warn{color:var(--coral)}
+.out p{font-size:15px;color:var(--mut)}
+.lbl{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.cta2{display:inline-block;margin-top:18px;background:transparent;border:1px solid var(--lime);color:var(--lime);text-decoration:none;padding:11px 22px;border-radius:99px;font-weight:600;font-size:14px;transition:.2s}
+.cta2:hover{background:var(--lime);color:#07070C}
+.err{color:var(--coral);font-size:14px;margin-top:10px;display:none}
+.err.on{display:block}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(295px,1fr));gap:20px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:31px;transition:.22s}
+.card:hover{border-color:var(--violet);transform:translateY(-5px)}
+.card .ic{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px;background:rgba(212,255,79,.11)}
+.card h3{font-size:21px;margin-bottom:5px}
+.card .who{font-size:13px;color:var(--violet);margin-bottom:17px}
+.card ul{list-style:none}
+.card li{font-size:14.5px;color:var(--mut);padding-left:21px;position:relative;margin-bottom:9px}
+.card li:before{content:"→";position:absolute;left:0;color:var(--lime)}
+.price{margin-top:21px;padding-top:17px;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+
+.feat{background:linear-gradient(135deg,rgba(155,123,255,.15),rgba(212,255,79,.06));border:1px solid var(--violet);border-radius:24px;padding:40px;margin-top:22px}
+.badge{display:inline-block;background:var(--violet);color:#fff;font-size:12px;font-weight:600;padding:5px 14px;border-radius:99px;margin-bottom:15px;letter-spacing:.05em}
+.feat ul{list-style:none}
+.feat li{color:var(--mut);font-size:15px;padding-left:21px;position:relative;margin-bottom:10px}
+.feat li:before{content:"→";position:absolute;left:0;color:var(--lime)}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:24px;margin-top:40px}
+.step .n{font-family:'Space Grotesk';font-size:44px;font-weight:700;color:var(--line);line-height:1}
+.step h3{font-size:18px;margin:8px 0 7px}
+.step p{font-size:15px;color:var(--mut)}
+
+.nope{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:38px}
+.nb{background:var(--surf);border:1px solid var(--line);border-left:3px solid var(--coral);border-radius:15px;padding:22px}
+.nb h3{font-size:16px;margin-bottom:6px}
+.nb p{font-size:14.5px;color:var(--mut)}
+
+.data{display:grid;grid-template-columns:repeat(auto-fit,minmax(218px,1fr));gap:14px}
+.dc{background:var(--surf);border:1px solid var(--line);border-radius:15px;padding:23px;transition:.2s}
+.dc:hover{border-color:var(--cyan)}
+.dc .k{font-family:'Space Grotesk';font-size:24px;font-weight:700;color:var(--lime)}
+.dc .v{font-size:13.5px;color:var(--mut);margin-top:5px}
+.fuente{font-size:13px;color:var(--mut);margin-top:18px}
+
+.faq{border-bottom:1px solid var(--line)}
+.faq summary{padding:20px 0;cursor:pointer;font-weight:500;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--lime);font-size:23px;flex-shrink:0}
+.faq[open] summary:after{content:"−"}
+.faq p{padding-bottom:21px;color:var(--mut);font-size:15.5px}
+
+footer{padding:84px 0 120px;text-align:center}
+footer h2{margin-bottom:14px}
+footer .fp{color:var(--mut);margin-bottom:28px}
+.contacto{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:46px;text-align:left}
+.cbox{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.2s}
+.cbox:hover{border-color:var(--lime)}
+.cbox .ck{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--violet);margin-bottom:7px}
+.cbox .cv{font-family:'Space Grotesk';font-size:18px;font-weight:500;color:var(--txt);text-decoration:none;word-break:break-word}
+.fmeta{margin-top:40px;padding-top:26px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+.float{position:fixed;bottom:22px;right:22px;background:var(--lime);color:#07070C;padding:15px 27px;border-radius:99px;text-decoration:none;font-weight:600;box-shadow:0 8px 30px rgba(212,255,79,.32);z-index:60;font-size:15px;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .35s,transform .35s,visibility .35s}
+.float.show{opacity:1;visibility:visible;transform:none}
+@media(max-width:620px){.hero{padding:58px 0 50px}section{padding:58px 0}.tool,.feat{padding:25px}.btn2{margin:12px 0 0;display:block;text-align:center}.float{padding:13px 22px;font-size:14px;bottom:16px;right:16px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.float{opacity:1;visibility:visible;transform:none}}
+</style>
+<noscript><style>.rv{opacity:1;transform:none}.out{display:block}.float{opacity:1;visibility:visible;transform:none}</style></noscript>
+</head>
+<body>
+
+<a class="skip" href="#contenido">Ir al contenido</a>
+
+<nav><div class="navin">
+  <div class="logo">ana<span>lix</span></div>
+  <a class="navcta" href="https://wa.me/573115632142?text=Hola%2C%20quiero%20el%20diagn%C3%B3stico%20gratuito%20de%2030%20minutos." target="_blank" rel="noopener">Diagnóstico gratis</a>
+</div></nav>
+
+<div class="wrap hero" id="contenido">
+  <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+  <div class="tag"><span class="dot" aria-hidden="true"></span>Bogotá · Atendemos todo el país</div>
+  <h1>Encontramos por dónde<br>se te <em>fuga la plata</em></h1>
+  <p class="lead">Costeo, inventario, software contable y control financiero para negocios que ya facturan pero no saben cuánto están ganando de verdad.</p>
+  <a class="btn" href="#diagnostico">Haz el diagnóstico</a>
+  <a class="btn btn2" href="#servicios">Ver servicios</a>
+  <div class="stats">
+    <div class="stat"><b data-c="30" data-suf=" min">0 min</b><span>Diagnóstico sin costo</span></div>
+    <div class="stat"><b>A tu medida</b><span>Según el tamaño del negocio</span></div>
+    <div class="stat"><b>Mismo día</b><span>Tiempo de respuesta</span></div>
+  </div>
+</div>
+
+<section id="diagnostico"><div class="wrap narrow rv">
+  <div class="eyebrow">Herramienta 01</div>
+  <h2>¿Cuánta plata estás perdiendo?</h2>
+  <p class="sub">Marca lo que te pasa en tu negocio. Te damos una estimación de cuánto te puede estar costando cada mes.</p>
+  <div class="tool">
+    <h3>Diagnóstico de fugas</h3>
+    <p class="th">Tarda menos de un minuto y no pedimos tus datos.</p>
+    <label class="chk"><input type="checkbox" data-w="3.5"><span>No sé exactamente cuánto me cuesta cada producto o plato</span></label>
+    <label class="chk"><input type="checkbox" data-w="3"><span>Mi inventario físico nunca cuadra con el sistema</span></label>
+    <label class="chk"><input type="checkbox" data-w="2.5"><span>Pongo los precios mirando a la competencia, no mis costos</span></label>
+    <label class="chk"><input type="checkbox" data-w="2"><span>Mezclo la plata del negocio con la personal</span></label>
+    <label class="chk"><input type="checkbox" data-w="2"><span>Tengo software contable pero lo uso solo para facturar</span></label>
+    <label class="chk"><input type="checkbox" data-w="1.5"><span>No sé cuáles de mis productos dejan plata y cuáles no</span></label>
+    <label class="chk"><input type="checkbox" data-w="1.5"><span>Se me vence mercancía o se me daña insumo con frecuencia</span></label>
+    <label class="fl" for="vt">Tus ventas mensuales aproximadas (COP)</label>
+    <input type="number" id="vt" placeholder="Ej: 25000000" min="0" step="100000" inputmode="numeric">
+    <div class="err" id="e1" role="alert">Escribe tus ventas mensuales para poder calcular.</div>
+    <button class="go" type="button" onclick="diag()">Calcular mi fuga estimada</button>
+    <div class="out" id="o1" aria-live="polite"><div class="lbl">Fuga mensual estimada</div><div class="big warn" id="r1">—</div><p id="r1b"></p><a class="cta2" id="c1" href="https://wa.me/573115632142?text=Hola%2C%20hice%20el%20diagn%C3%B3stico%20en%20la%20p%C3%A1gina%20y%20quiero%20el%20real." target="_blank" rel="noopener">Quiero el diagnóstico real</a></div>
+  </div>
+</div></section>
+
+<section><div class="wrap narrow rv">
+  <div class="eyebrow">Herramienta 02</div>
+  <h2>Calculadora de margen real</h2>
+  <p class="sub">Mete el costo y el precio de un producto o plato y mira si de verdad te está dejando plata.</p>
+  <div class="tool">
+    <h3>Costo contra precio</h3>
+    <p class="th">El error más común: creer que el costo del insumo es el costo total.</p>
+    <div class="g2">
+      <div><label class="fl" for="ci">Costo de insumos por unidad</label><input type="number" id="ci" placeholder="8000" min="0" step="100" inputmode="numeric"></div>
+      <div><label class="fl" for="pv">Precio de venta actual</label><input type="number" id="pv" placeholder="22000" min="0" step="100" inputmode="numeric"></div>
+    </div>
+    <label class="fl" for="mr">Margen objetivo: <b id="mo" style="color:var(--lime)">65</b>%</label>
+    <input type="range" id="mr" min="20" max="85" value="65" step="1">
+    <div class="err" id="e2" role="alert">Escribe el costo y el precio para calcular.</div>
+    <button class="go" type="button" onclick="margen()">Calcular margen</button>
+    <div class="out" id="o2" aria-live="polite"><div class="lbl">Tu margen actual sobre insumos</div><div class="big" id="r2">—</div><p id="r2b"></p><a class="cta2" id="c2" href="https://wa.me/573115632142?text=Hola%2C%20quiero%20que%20me%20cost%C3%A9en%20la%20carta%20completa." target="_blank" rel="noopener">Costéame la carta completa</a></div>
+  </div>
+</div></section>
+
+<section><div class="wrap narrow rv">
+  <div class="eyebrow">Herramienta 03</div>
+  <h2>¿Cuánto necesitas vender para no perder?</h2>
+  <p class="sub">Tu punto de equilibrio: el mínimo que tienes que facturar al mes para quedar en cero.</p>
+  <div class="tool">
+    <h3>Punto de equilibrio</h3>
+    <p class="th">Si no conoces este número, estás manejando a ciegas.</p>
+    <label class="fl" for="cf">Costos fijos mensuales (arriendo, nómina, servicios)</label>
+    <input type="number" id="cf" placeholder="12000000" min="0" step="100000" inputmode="numeric">
+    <div class="g2">
+      <div><label class="fl" for="pp">Precio promedio de venta</label><input type="number" id="pp" placeholder="22000" min="0" step="100" inputmode="numeric"></div>
+      <div><label class="fl" for="cv">Costo variable promedio</label><input type="number" id="cv" placeholder="8000" min="0" step="100" inputmode="numeric"></div>
+    </div>
+    <div class="err" id="e3" role="alert">Completa los tres campos. El precio debe ser mayor al costo variable.</div>
+    <button class="go" type="button" onclick="pe()">Calcular punto de equilibrio</button>
+    <div class="out" id="o3" aria-live="polite"><div class="lbl">Necesitas vender al mes</div><div class="big" id="r3">—</div><p id="r3b"></p><a class="cta2" id="c3" href="https://wa.me/573115632142?text=Hola%2C%20quiero%20revisar%20mis%20n%C3%BAmeros." target="_blank" rel="noopener">Hablemos de mis números</a></div>
+  </div>
+</div></section>
+
+<section id="servicios"><div class="wrap rv">
+  <div class="eyebrow">Servicios</div>
+  <h2>Paquetes por tipo de negocio</h2>
+  <p class="sub">Cada negocio pierde plata de forma distinta. Por eso no le vendemos lo mismo a todos.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="ic" aria-hidden="true">🍳</div><h3>Gastronomía</h3>
+      <p class="who">Restaurantes · Panaderías · Cafeterías · Catering</p>
+      <ul>
+        <li>Costeo de cada plato y de la carta completa</li>
+        <li>Receta estándar y control de mermas</li>
+        <li>Inventario de insumos y punto de reorden</li>
+        <li>Precio sugerido según margen real</li>
+        <li>Ranking de rentabilidad por plato</li>
+        <li>Plantilla que puedes actualizar tú mismo</li>
+      </ul>
+      <div class="price">Valor según el alcance · lo definimos en el diagnóstico</div>
+    </div>
+    <div class="card">
+      <div class="ic" aria-hidden="true">📦</div><h3>Comercio</h3>
+      <p class="who">Ferreterías · Papelerías · Minimercados · Distribuidoras</p>
+      <ul>
+        <li>Estructuración del inventario desde cero</li>
+        <li>Cuadre de existencias contra sistema</li>
+        <li>Margen por línea de producto</li>
+        <li>Montaje en Siigo, Alegra o World Office</li>
+        <li>Rotación y detección de producto muerto</li>
+        <li>Capacitación al encargado</li>
+      </ul>
+      <div class="price">Valor según el alcance · lo definimos en el diagnóstico</div>
+    </div>
+    <div class="card">
+      <div class="ic" aria-hidden="true">💼</div><h3>Independientes</h3>
+      <p class="who">Profesionales · Consultorios · Talleres · Salones</p>
+      <ul>
+        <li>Montaje de facturación electrónica</li>
+        <li>Inscripción y actualización de RUT</li>
+        <li>Separación de finanzas personales y del negocio</li>
+        <li>Control de caja y flujo mensual</li>
+        <li>Proyección de obligaciones del año</li>
+        <li>Tablero simple de ingresos y gastos</li>
+      </ul>
+      <div class="price">Valor según el alcance · lo definimos en el diagnóstico</div>
+    </div>
+  </div>
+
+  <div class="feat">
+    <div class="badge">LO MÁS CONTRATADO</div>
+    <h3 style="font-size:28px;margin-bottom:8px">Acompañamiento mensual</h3>
+    <p style="color:var(--mut);margin-bottom:24px;font-size:16px">Montar el sistema es la mitad del trabajo. La otra mitad es que no se vuelva a desordenar.</p>
+    <div class="g2">
+      <ul><li>Cuadre mensual de inventario y caja</li><li>Revisión de costos cuando suben los insumos</li><li>Alertas de productos que dejaron de ser rentables</li></ul>
+      <ul><li>Informe mensual de rentabilidad</li><li>Calendario de obligaciones al día</li><li>Soporte por WhatsApp entre visitas</li></ul>
+    </div>
+    <div class="price">Valor mensual según el tamaño del negocio · sin cláusula de permanencia</div>
+  </div>
+</div></section>
+
+<section><div class="wrap rv">
+  <div class="eyebrow">Cómo trabajamos</div>
+  <h2>Tres pasos, sin letra menuda</h2>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><h3>Diagnóstico gratuito</h3><p>30 minutos. Te decimos qué está desordenado y cuánto te puede estar costando. Sin compromiso y sin venderte nada.</p></div>
+    <div class="step"><div class="n">02</div><h3>Propuesta con precio fijo</h3><p>Alcance claro y valor cerrado antes de empezar. Si no te sirve, no pasa nada.</p></div>
+    <div class="step"><div class="n">03</div><h3>Implementación y entrega</h3><p>Lo dejamos funcionando y capacitamos a tu equipo. Te queda el sistema, no la dependencia.</p></div>
+  </div>
+  <div class="nope">
+    <div class="nb"><h3>No vendemos licencias</h3><p>No somos distribuidores de ningún software ni cobramos comisión por recomendarte una plataforma. Trabajamos sobre la que ya tienes.</p></div>
+    <div class="nb"><h3>No te dejamos dependiendo</h3><p>Todo queda documentado y capacitamos a tu gente. Si mañana quieres seguir solo, puedes.</p></div>
+    <div class="nb"><h3>No hay permanencia</h3><p>Proyectos con alcance cerrado y acompañamiento mensual que puedes terminar cuando quieras.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap rv">
+  <div class="eyebrow">Datos 2026</div>
+  <h2>Cifras que te conviene tener a mano</h2>
+  <p class="sub">Valores vigentes para este año. Si alguna te aplica o te genera dudas, hablemos.</p>
+  <div class="data">
+    <div class="dc"><div class="k">$52.374</div><div class="v">Valor de la UVT para 2026</div></div>
+    <div class="dc"><div class="k">$183.309.000</div><div class="v">Tope de ingresos para seguir siendo no responsable de IVA (3.500 UVT)</div></div>
+    <div class="dc"><div class="k">$73.324.000</div><div class="v">Tope de ingresos que obliga a declarar renta (1.400 UVT)</div></div>
+    <div class="dc"><div class="k">$209.496.000</div><div class="v">Tope ampliado para quienes prestan servicios al Estado (4.000 UVT)</div></div>
+  </div>
+  <p class="fuente">Fuente: Resolución DIAN 000238 del 15 de diciembre de 2025, que fijó la UVT para el año gravable 2026. Topes aproximados al mil más cercano.</p>
+</div></section>
+
+<section><div class="wrap narrow rv">
+  <div class="eyebrow">Preguntas</div>
+  <h2>Lo que todos preguntan</h2>
+  <div style="margin-top:34px">
+    <details class="faq"><summary>¿Cuánto cuesta?</summary><p>Depende del tamaño del negocio y del alcance. Por eso el diagnóstico es gratis: primero vemos qué necesitas de verdad y después te damos un valor fijo, cerrado, antes de empezar.</p></details>
+    <details class="faq"><summary>¿Para qué costear si ya sé cuánto vendo?</summary><p>Vender mucho y ganar poco es lo más común en negocios pequeños. Sin costeo no sabes cuáles productos sostienen el negocio y cuáles te lo están comiendo. Cuando lo ves en números, casi siempre hay dos o tres referencias que llevan meses trabajando en contra.</p></details>
+    <details class="faq"><summary>¿Tengo que cambiar de software contable?</summary><p>No. Trabajamos sobre lo que ya tienes: Siigo, Alegra, World Office, Excel o incluso cuaderno. Si de verdad te conviene cambiar te lo decimos en el diagnóstico, con el motivo y el costo, pero no vendemos licencias ni cobramos comisión por recomendarte una plataforma.</p></details>
+    <details class="faq"><summary>¿Atienden negocios pequeños?</summary><p>Sí. El alcance y el valor se ajustan al tamaño del negocio: a un negocio pequeño no le montamos una estructura que no necesita ni le cobramos como si fuera una empresa grande.</p></details>
+    <details class="faq"><summary>¿Solo trabajan en Bogotá?</summary><p>Estamos en Bogotá y ahí hacemos visitas presenciales. Para el resto del país trabajamos de forma remota, con reuniones por videollamada y soporte por WhatsApp. El entregable es el mismo.</p></details>
+    <details class="faq"><summary>¿Cuánto demora la implementación?</summary><p>Un costeo de carta o una estructuración de inventario toma entre dos y cuatro semanas, según el número de referencias y el orden con el que arranquemos. En el diagnóstico te damos la fecha de entrega antes de que decidas.</p></details>
+    <details class="faq"><summary>¿Hay que firmar contrato de permanencia?</summary><p>No. Los proyectos son por alcance cerrado y el acompañamiento mensual se puede terminar cuando quieras. Lo que montamos queda en tu negocio y queda documentado para que lo puedas seguir usando sin nosotros.</p></details>
+    <details class="faq"><summary>¿Qué necesitan de mi parte para empezar?</summary><p>Para el diagnóstico, nada: solo la conversación. Para trabajar necesitamos acceso a lo que ya tengas (facturas de compra, lista de precios, el software si lo usas) y una persona del negocio que conozca la operación del día a día.</p></details>
+    <details class="faq"><summary>¿Las calculadoras de esta página son exactas?</summary><p>No, son estimaciones para darte una idea de la magnitud. Trabajan con promedios y con lo que marcaste, no con tus cifras reales. El diagnóstico de 30 minutos sí revisa tus números.</p></details>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="rv">
+    <h2>Agenda tu diagnóstico gratuito</h2>
+    <p class="fp">30 minutos, sin costo y sin compromiso. Salimos de ahí con tres cosas concretas por arreglar en tu negocio.</p>
+    <a class="btn" href="https://wa.me/573115632142?text=Hola%2C%20quiero%20agendar%20el%20diagn%C3%B3stico%20gratuito%20de%2030%20minutos." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </div>
+  <div class="contacto rv">
+    <div class="cbox"><div class="ck">WhatsApp</div><a class="cv" href="https://wa.me/573115632142" target="_blank" rel="noopener">+57 311 563 2142</a></div>
+    <!-- Para mostrar el correo, reemplaza esta caja por:
+    <div class="cbox"><div class="ck">Correo</div><a class="cv" href="mailto:TUCORREO@DOMINIO.COM">TUCORREO@DOMINIO.COM</a></div> -->
+    <div class="cbox"><div class="ck">Cómo empezamos</div><div class="cv">Una llamada de 30 minutos</div></div>
+    <div class="cbox"><div class="ck">Cobertura</div><div class="cv">Bogotá presencial · resto del país remoto</div></div>
+    <div class="cbox"><div class="ck">Horario</div><div class="cv">Lun a vie 8:00–18:00 · sáb 9:00–13:00</div></div>
+  </div>
+  <div class="fmeta">
+    Analix · Costeo, inventario y control financiero para pequeños negocios.<br>
+    Las cifras tributarias mostradas corresponden al año gravable 2026 y son de carácter informativo; no constituyen asesoría tributaria formal. Los resultados de las calculadoras son estimaciones aproximadas basadas en los datos que usted ingresa.
+  </div>
+</div></footer>
+
+<a class="float" id="fab" href="https://wa.me/573115632142?text=Hola%2C%20quiero%20el%20diagn%C3%B3stico%20gratuito." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">Hablemos por WhatsApp</a>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Analix",
+  "description":"Costeo, inventario, software contable y control financiero para pequeños negocios en Colombia.",
+  "areaServed":[{"@type":"City","name":"Bogotá"},{"@type":"Country","name":"Colombia"}],
+  "telephone":"+573115632142",
+  "priceRange":"$$",
+  "address":{"@type":"PostalAddress","addressLocality":"Bogotá","addressCountry":"CO"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}
+  ],
+  "knowsAbout":["Costeo de productos","Control de inventario","Punto de equilibrio","Facturación electrónica","Siigo","Alegra","World Office"]
+}
+</script>
+
+<script>
+const WA='https://wa.me/573115632142?text=';
+const cop=n=>'$'+new Intl.NumberFormat('es-CO',{maximumFractionDigits:0}).format(Math.round(n));
+const mil=n=>new Intl.NumberFormat('es-CO',{maximumFractionDigits:0}).format(Math.round(n));
+const g=id=>document.getElementById(id);
+const val=id=>{const v=parseFloat(String(g(id).value).replace(/[^\d.-]/g,''));return isNaN(v)?null:v};
+const wa=(id,msg)=>{g(id).href=WA+encodeURIComponent(msg)};
+
+/* Herramienta 01 — diagnóstico de fugas */
+function diag(){
+  const ventas=val('vt'), err=g('e1'), out=g('o1');
+  if(ventas===null||ventas<=0){err.classList.add('on');out.classList.remove('on');g('vt').focus();return}
+  err.classList.remove('on');
+  let peso=0, marcadas=[];
+  document.querySelectorAll('#diagnostico .chk input').forEach(c=>{
+    if(c.checked){peso+=parseFloat(c.dataset.w)||0;marcadas.push(c.parentElement.querySelector('span').textContent)}
+  });
+  const pct=Math.min(peso,14);
+  const fuga=ventas*pct/100;
+  const big=g('r1'), txt=g('r1b');
+  if(marcadas.length===0){
+    big.classList.remove('warn');
+    big.textContent='Nada marcado todavía';
+    txt.textContent='Marca arriba lo que te está pasando y volvemos a calcular. Si de verdad no te pasa ninguna, tu control está mejor que el del 90% de los negocios de tu tamaño.';
+    wa('c1','Hola, hice el diagnóstico en la página y quiero el real.');
+  }else{
+    big.classList.add('warn');
+    big.textContent=cop(fuga)+' al mes';
+    txt.textContent='Son cerca del '+pct.toFixed(1)+'% de tus ventas, unos '+cop(fuga*12)+' al año, a partir de '+marcadas.length+(marcadas.length===1?' señal marcada.':' señales marcadas.')+' Es una estimación con promedios del sector, no tus números reales: el diagnóstico de 30 minutos los revisa de verdad.';
+    wa('c1','Hola, hice el diagnóstico en la página.\n\nVentas al mes: '+cop(ventas)+'\nFuga estimada: '+cop(fuga)+' al mes\n\nLo que marqué:\n· '+marcadas.join('\n· ')+'\n\nQuiero el diagnóstico real.');
+  }
+  out.classList.add('on');
+}
+
+/* Herramienta 02 — margen real */
+g('mr').addEventListener('input',e=>{g('mo').textContent=e.target.value});
+function margen(){
+  const costo=val('ci'), precio=val('pv'), err=g('e2'), out=g('o2');
+  if(costo===null||precio===null||costo<0||precio<=0){err.classList.add('on');out.classList.remove('on');return}
+  err.classList.remove('on');
+  const obj=parseFloat(g('mr').value);
+  const margenPct=(precio-costo)/precio*100;
+  const sugerido=costo/(1-obj/100);
+  const big=g('r2'), txt=g('r2b');
+  big.textContent=margenPct.toFixed(1)+'%';
+  if(margenPct<0){
+    big.classList.add('warn');
+    txt.textContent='Estás vendiendo por debajo del costo del insumo: pierdes '+cop(costo-precio)+' cada vez que vendes esta unidad, antes de contar arriendo, nómina y servicios. Para un margen del '+obj+'% el precio tendría que ser '+cop(sugerido)+'.';
+  }else if(margenPct<obj){
+    big.classList.add('warn');
+    txt.textContent='Te deja '+cop(precio-costo)+' por unidad, por debajo de tu objetivo del '+obj+'%. Para llegar a ese margen el precio tendría que ser '+cop(sugerido)+', es decir '+cop(sugerido-precio)+' más. Ojo: este margen es solo sobre insumos; de ahí todavía salen arriendo, nómina, servicios y desperdicio.';
+  }else{
+    big.classList.remove('warn');
+    txt.textContent='Te deja '+cop(precio-costo)+' por unidad y cumple tu objetivo del '+obj+'%. Recuerda que es margen sobre insumos: de ahí salen arriendo, nómina, servicios y mermas, así que el margen final del negocio es menor.';
+  }
+  wa('c2','Hola, calculé el margen de un producto en la página.\n\nCosto de insumos: '+cop(costo)+'\nPrecio de venta: '+cop(precio)+'\nMargen actual: '+margenPct.toFixed(1)+'% (objetivo '+obj+'%)\n\nQuiero que me costeen la carta completa.');
+  out.classList.add('on');
+}
+
+/* Herramienta 03 — punto de equilibrio */
+function pe(){
+  const fijos=val('cf'), precio=val('pp'), variable=val('cv'), err=g('e3'), out=g('o3');
+  if(fijos===null||precio===null||variable===null||fijos<0||precio<=0||variable<0||precio<=variable){
+    err.classList.add('on');out.classList.remove('on');return
+  }
+  err.classList.remove('on');
+  const contrib=precio-variable;
+  const unidades=fijos/contrib;
+  const facturacion=unidades*precio;
+  g('r3').textContent=cop(facturacion);
+  g('r3b').textContent='Equivale a unas '+mil(unidades)+' unidades al mes, cerca de '+mil(unidades/30)+' al día si abres los 30 días. Cada venta deja '+cop(contrib)+' para cubrir tus costos fijos; de ahí en adelante empiezas a ganar.';
+  wa('c3','Hola, calculé mi punto de equilibrio en la página.\n\nCostos fijos: '+cop(fijos)+' al mes\nPrecio promedio: '+cop(precio)+'\nCosto variable: '+cop(variable)+'\nPunto de equilibrio: '+cop(facturacion)+' al mes ('+mil(unidades)+' unidades)\n\nQuiero revisar mis números.');
+  out.classList.add('on');
+}
+
+/* Animaciones de entrada */
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>{
+    es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+}
+
+/* Botón flotante: aparece al pasar el hero */
+const fab=g('fab');
+const verFab=()=>{fab.classList.toggle('show',window.scrollY>520)};
+window.addEventListener('scroll',verFab,{passive:true});
+verFab();
+
+/* Contador del hero */
+document.querySelectorAll('.stat b[data-c]').forEach(el=>{
+  const fin=parseFloat(el.dataset.c), suf=el.dataset.suf||'', ini=performance.now(), dur=1100;
+  const paso=t=>{
+    const p=Math.min((t-ini)/dur,1);
+    el.textContent=Math.round(fin*(1-Math.pow(1-p,3)))+suf;
+    if(p<1)requestAnimationFrame(paso);
+  };
+  requestAnimationFrame(paso);
+});
+</script>
+</body>
+</html>
