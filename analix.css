@@ -78,6 +78,33 @@ footer{padding:58px 0 110px;border-top:1px solid var(--line);margin-top:60px}
 .cbox .cv{font-family:'Space Grotesk';font-size:16.5px;font-weight:500;color:var(--txt);text-decoration:none;word-break:break-word}
 .fmeta{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
 
+/* --- Calculadoras --- */
+.calc{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:28px;margin:28px 0}
+.calc h3{margin-top:0;font-size:20px}
+.calc .ayuda{color:var(--mut);font-size:14.5px;margin-bottom:22px}
+.campo{margin-bottom:16px}
+.campo label{display:block;font-size:13.5px;color:var(--mut);margin-bottom:7px}
+.campo .pista{color:var(--violet);font-size:12.5px}
+.calc input[type=number],.calc select{width:100%;background:var(--surf2);border:1px solid var(--line);color:var(--txt);padding:13px 15px;border-radius:11px;font-size:16px;font-family:inherit}
+.calc input:focus,.calc select:focus{outline:none;border-color:var(--lime)}
+.calc input[type=range]{width:100%;accent-color:var(--lime);margin-top:6px}
+.cg2{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.calc button.go{width:100%;background:var(--lime);color:#07070C;border:0;padding:15px;border-radius:11px;font-weight:600;font-size:16px;font-family:inherit;cursor:pointer;margin-top:18px;transition:.2s}
+.calc button.go:hover{box-shadow:0 0 26px rgba(212,255,79,.4)}
+.res{margin-top:22px;padding:24px;border-radius:14px;background:var(--surf2);border-left:3px solid var(--lime);display:none}
+.res.on{display:block}
+.res .et{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.res .num{font-family:'Space Grotesk';font-size:34px;font-weight:700;color:var(--lime);line-height:1.15;margin:6px 0 10px}
+.res .num.mal{color:var(--coral)}
+.res p{font-size:15px;color:var(--mut);margin-bottom:0}
+.res .detalle{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--mut)}
+.res .detalle span{display:flex;justify-content:space-between;gap:14px;padding:4px 0}
+.res .detalle b{color:var(--txt);font-weight:600}
+.err{color:var(--coral);font-size:14px;margin-top:10px;display:none}
+.err.on{display:block}
+.cta2{display:inline-block;margin-top:18px;background:transparent;border:1px solid var(--lime);color:var(--lime);text-decoration:none;padding:11px 22px;border-radius:99px;font-weight:600;font-size:14px;transition:.2s}
+.cta2:hover{background:var(--lime);color:#07070C}
+
 .float{position:fixed;bottom:22px;right:22px;background:var(--lime);color:#07070C;padding:15px 27px;border-radius:99px;text-decoration:none;font-weight:600;box-shadow:0 8px 30px rgba(212,255,79,.32);z-index:60;font-size:15px}
 @media(max-width:620px){article{padding:14px 0 50px}.cta{padding:25px}.float{padding:13px 22px;font-size:14px;bottom:16px;right:16px}article p,article li{font-size:16px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
